@@ -2,5 +2,6 @@
 
 Test01
   log to console  Witaj Świecie
+  k
 
 
