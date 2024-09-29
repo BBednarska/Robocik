@@ -5,4 +5,7 @@ ${url}  http://127.0.0.1:5000
 *** Test Cases ***
 Test create new game
     [Documentation]  test tworzenia nowej gry
-    POST  ${url}/game
+    ${response}  POST  ${url}/game
+    should be equal as numbers    ${response.status_code}    201
+    ${json_data}    set variable    ${response.json()}
+    should be equal     ${json_data["message"]}  New game created

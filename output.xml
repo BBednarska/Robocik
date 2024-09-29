@@ -1,30 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-09-29T12:23:16.492072" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-09-29T12:52:51.900045" rpa="false" schemaversion="5">
 <suite id="s1" name="Test Api" source="C:\Users\user\PycharmProjects\Robot\test_api.robot">
 <test id="s1-t1" name="Test create new game" line="6">
 <kw name="POST" owner="RequestsLibrary">
-<msg time="2024-09-29T12:23:16.981243" level="INFO">POST Request : url=http://127.0.0.1:5000/game 
+<msg time="2024-09-29T12:52:52.371891" level="INFO">POST Request : url=http://127.0.0.1:5000/game 
  path_url=/game 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
  body=None 
  </msg>
-<msg time="2024-09-29T12:23:16.981243" level="INFO">POST Response : url=http://127.0.0.1:5000/game 
+<msg time="2024-09-29T12:52:52.372886" level="INFO">POST Response : url=http://127.0.0.1:5000/game 
  status=201, reason=CREATED 
- headers={'Server': 'Werkzeug/3.0.4 Python/3.12.5', 'Date': 'Sun, 29 Sep 2024 10:23:16 GMT', 'Content-Type': 'application/json', 'Content-Length': '53', 'Access-Control-Allow-Origin': '*', 'Connection': 'close'} 
+ headers={'Server': 'Werkzeug/3.0.4 Python/3.12.5', 'Date': 'Sun, 29 Sep 2024 10:52:52 GMT', 'Content-Type': 'application/json', 'Content-Length': '53', 'Access-Control-Allow-Origin': '*', 'Connection': 'close'} 
  body={
-  "game_id": 20,
+  "game_id": 29,
   "message": "New game created"
 }
  
  </msg>
+<msg time="2024-09-29T12:52:52.372886" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
 <arg>${url}/game</arg>
 <doc>Sends a POST request.</doc>
-<status status="PASS" start="2024-09-29T12:23:16.969638" elapsed="0.011605"/>
+<status status="PASS" start="2024-09-29T12:52:52.359397" elapsed="0.013489"/>
+</kw>
+<kw name="Should Be Equal As Numbers" owner="BuiltIn">
+<msg time="2024-09-29T12:52:52.375433" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to real numbers.</doc>
+<status status="PASS" start="2024-09-29T12:52:52.374388" elapsed="0.001045"/>
 </kw>
 <doc>test tworzenia nowej gry</doc>
-<status status="PASS" start="2024-09-29T12:23:16.969638" elapsed="0.012603"/>
+<status status="PASS" start="2024-09-29T12:52:52.358352" elapsed="0.017081"/>
 </test>
-<status status="PASS" start="2024-09-29T12:23:16.493043" elapsed="0.490199"/>
+<status status="PASS" start="2024-09-29T12:52:51.901015" elapsed="0.475605"/>
 </suite>
 <statistics>
 <total>
