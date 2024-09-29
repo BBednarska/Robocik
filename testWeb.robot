@@ -45,3 +45,4 @@ Test Click double
     ${cell_text}  Get Text  xpath://*[@id="game-board"]/div[2]/div[2]
     log     ${cell_text}
     should be equal    ${cell_text}  X
+
