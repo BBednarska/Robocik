@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-09-29T10:41:56.139777" rpa="false" schemaversion="5">
+<suite id="s1" name="testWeb" source="C:\Users\user\PycharmProjects\Robot\testWeb.robot">
+<test id="s1-t1" name="Test Click double" line="29">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-29T10:41:56.474501" level="INFO">Opening browser 'Edge' to base url 'file:///C:/Users/user/Downloads/webTicTacToe-master/webTicTacToe-master/index.html'.</msg>
+<arg>${url}</arg>
+<arg>Edge</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-29T10:41:56.474501" elapsed="2.072110"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-29T10:42:00.550210" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-29T10:41:58.547606" elapsed="2.002604"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-29T10:42:00.550210" elapsed="0.047825"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-29T10:42:00.603784" level="INFO">Clicking element 'ID:new-game'.</msg>
+<arg>ID:new-game</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T10:42:00.600939" elapsed="0.184813"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-29T10:42:02.787916" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-29T10:42:00.787249" elapsed="2.000667"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-29T10:42:02.789018" level="INFO">Clicking element 'xpath://*[@id="game-board"]/div[2]/div[2]'.</msg>
+<arg>xpath://*[@id="game-board"]/div[2]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T10:42:02.787916" elapsed="0.100714"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-29T10:42:04.889811" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-29T10:42:02.889177" elapsed="2.000634"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-29T10:42:04.934824" level="INFO">${cell_text} = X</msg>
+<var>${cell_text}</var>
+<arg>xpath://*[@id="game-board"]/div[2]/div[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T10:42:04.890324" elapsed="0.044500"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-29T10:42:04.934824" level="INFO">X</msg>
+<arg>${cell_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-29T10:42:04.934824" elapsed="0.000000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${cell_text}</arg>
+<arg>X</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-29T10:42:04.934824" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-09-29T10:42:04.938888" level="INFO">Clicking element 'xpath://*[@id="game-board"]/div[2]/div[2]'.</msg>
+<arg>xpath://*[@id="game-board"]/div[2]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T10:42:04.938888" elapsed="0.078630"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-29T10:42:06.019569" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-29T10:42:05.017518" elapsed="1.002051"/>
+</kw>
+<kw name="Alert Should Be Present" owner="SeleniumLibrary">
+<msg time="2024-09-29T10:42:06.020601" level="INFO">HANDLE::&lt;class 'NoneType'&gt;::None</msg>
+<doc>Verifies that an alert is present and by default, accepts it.</doc>
+<status status="PASS" start="2024-09-29T10:42:06.020601" elapsed="0.013984"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-09-29T10:42:07.037591" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-09-29T10:42:06.037146" elapsed="1.000445"/>
+</kw>
+<kw name="Get Text" owner="SeleniumLibrary">
+<msg time="2024-09-29T10:42:07.094580" level="INFO">${cell_text} = X</msg>
+<var>${cell_text}</var>
+<arg>xpath://*[@id="game-board"]/div[2]/div[2]</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-29T10:42:07.037591" elapsed="0.056989"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-09-29T10:42:07.096152" level="INFO">X</msg>
+<arg>${cell_text}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-09-29T10:42:07.094580" elapsed="0.001572"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${cell_text}</arg>
+<arg>X</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2024-09-29T10:42:07.096152" elapsed="0.000000"/>
+</kw>
+<doc>Test otwiera nową grę i klika dwa razy w pole</doc>
+<status status="PASS" start="2024-09-29T10:41:56.473496" elapsed="10.622656"/>
+</test>
+<status status="PASS" start="2024-09-29T10:41:56.141717" elapsed="10.954435"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="testWeb">testWeb</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
