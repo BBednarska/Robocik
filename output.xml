@@ -1,50 +1,158 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-09-29T12:52:51.900045" rpa="false" schemaversion="5">
-<suite id="s1" name="Test Api" source="C:\Users\user\PycharmProjects\Robot\test_api.robot">
-<test id="s1-t1" name="Test create new game" line="6">
-<kw name="POST" owner="RequestsLibrary">
-<msg time="2024-09-29T12:52:52.371891" level="INFO">POST Request : url=http://127.0.0.1:5000/game 
- path_url=/game 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Length': '0'} 
- body=None 
- </msg>
-<msg time="2024-09-29T12:52:52.372886" level="INFO">POST Response : url=http://127.0.0.1:5000/game 
- status=201, reason=CREATED 
- headers={'Server': 'Werkzeug/3.0.4 Python/3.12.5', 'Date': 'Sun, 29 Sep 2024 10:52:52 GMT', 'Content-Type': 'application/json', 'Content-Length': '53', 'Access-Control-Allow-Origin': '*', 'Connection': 'close'} 
- body={
-  "game_id": 29,
-  "message": "New game created"
-}
- 
- </msg>
-<msg time="2024-09-29T12:52:52.372886" level="INFO">${response} = &lt;Response [201]&gt;</msg>
-<var>${response}</var>
-<arg>${url}/game</arg>
-<doc>Sends a POST request.</doc>
-<status status="PASS" start="2024-09-29T12:52:52.359397" elapsed="0.013489"/>
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-10-10T13:29:36.180943" rpa="false" schemaversion="5">
+<suite id="s1" name="Physiotherapie" source="C:\Users\user\PycharmProjects\Robot\Physiotherapie.robot">
+<test id="s1-t1" name="Test open browser" line="9">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:37.057467" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-10T13:29:37.057467" elapsed="2.767668"/>
 </kw>
-<kw name="Should Be Equal As Numbers" owner="BuiltIn">
-<msg time="2024-09-29T12:52:52.375433" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${response.status_code}</arg>
-<arg>201</arg>
-<doc>Fails if objects are unequal after converting them to real numbers.</doc>
-<status status="PASS" start="2024-09-29T12:52:52.374388" elapsed="0.001045"/>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2024-10-10T13:29:39.838643" elapsed="2.119607"/>
 </kw>
-<doc>test tworzenia nowej gry</doc>
-<status status="PASS" start="2024-09-29T12:52:52.358352" elapsed="0.017081"/>
+<status status="PASS" start="2024-10-10T13:29:37.043426" elapsed="4.914824"/>
 </test>
-<status status="PASS" start="2024-09-29T12:52:51.901015" elapsed="0.475605"/>
+<test id="s1-t2" name="Test click coockies" line="13">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:41.958250" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-10T13:29:41.958250" elapsed="2.533834"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T13:29:45.492539" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-10T13:29:44.492084" elapsed="1.000455"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:45.492539" level="INFO">Clicking element 'Xpath:/html/body/div/div[3]/div/div[2]/a[1]'.</msg>
+<arg>Xpath:/html/body/div/div[3]/div/div[2]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T13:29:45.492539" elapsed="0.129644"/>
+</kw>
+<status status="PASS" start="2024-10-10T13:29:41.958250" elapsed="3.664076"/>
+</test>
+<test id="s1-t3" name="Test click team" line="18">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:45.623345" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-10T13:29:45.623345" elapsed="2.541495"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T13:29:49.165191" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-10T13:29:48.164840" elapsed="1.000351"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:49.165191" level="INFO">Clicking element 'Xpath:/html/body/div/div[3]/div/div[2]/a[1]'.</msg>
+<arg>Xpath:/html/body/div/div[3]/div/div[2]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T13:29:49.165191" elapsed="0.127165"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T13:29:50.293745" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-10T13:29:49.293401" elapsed="1.000344"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:50.293745" level="INFO">Clicking element 'Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a'.</msg>
+<arg>Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T13:29:50.293745" elapsed="0.409019"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T13:29:52.704722" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-10T13:29:50.703784" elapsed="2.000938"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:53.022828" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screen_team.png"&gt;&lt;img src="screen_team.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screen_team.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-10T13:29:52.705787" elapsed="0.317041"/>
+</kw>
+<status status="PASS" start="2024-10-10T13:29:45.623345" elapsed="7.415094"/>
+</test>
+<test id="s1-t4" name="Test scroll" line="27">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:53.038439" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
+<arg>${url}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-10-10T13:29:53.038439" elapsed="2.799201"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T13:29:56.838187" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-10T13:29:55.837640" elapsed="1.000547"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:56.838187" level="INFO">Clicking element 'Xpath:/html/body/div/div[3]/div/div[2]/a[1]'.</msg>
+<arg>Xpath:/html/body/div/div[3]/div/div[2]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T13:29:56.838187" elapsed="0.137405"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T13:29:57.975924" level="INFO">Slept 1 second.</msg>
+<arg>1</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-10T13:29:56.975592" elapsed="1.000332"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:29:57.975924" level="INFO">Clicking element 'Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a'.</msg>
+<arg>Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-10-10T13:29:57.975924" elapsed="0.700781"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T13:30:00.676939" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-10T13:29:58.676705" elapsed="2.000234"/>
+</kw>
+<kw name="Execute Javascript" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:30:00.676939" level="INFO">Executing JavaScript:
+window.scrollBy(0,3500)
+Without any arguments.</msg>
+<arg>window.scrollBy(0,3500)</arg>
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<status status="PASS" start="2024-10-10T13:30:00.676939" elapsed="0.014828"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-10-10T13:30:02.692326" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-10-10T13:30:00.691767" elapsed="2.000559"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2024-10-10T13:30:02.833475" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screen_me.png"&gt;&lt;img src="screen_me.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>screen_me.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2024-10-10T13:30:02.692326" elapsed="0.141149"/>
+</kw>
+<status status="PASS" start="2024-10-10T13:29:53.038439" elapsed="9.795036"/>
+</test>
+<status status="PASS" start="2024-10-10T13:29:36.180943" elapsed="26.652532"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="0" skip="0">All Tests</stat>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="Test Api">Test Api</stat>
+<stat pass="4" fail="0" skip="0" id="s1" name="Physiotherapie">Physiotherapie</stat>
 </suite>
 </statistics>
 <errors>
