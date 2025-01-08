@@ -39,5 +39,5 @@ Test Scroll & Screenshot  #sprawdzam, czy możliwe jest skrollowanie na stronie
 Test Find Osteopathie  #sprawdzam, czy na stronie zawarte są odpowiednie wyrażenia
     OpenPageAndAcceptCookies
     page should contain  ${PAGE_TITLE}
-    sleep  2
+
 
