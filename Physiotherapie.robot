@@ -34,6 +34,7 @@ Test Scroll & Screenshot  #sprawdzam, czy możliwe jest skrollowanie na stronie
     click element   ${TEAM_LINK}
     execute javascript  window.scrollBy(0,4250)
 
+
     capture page screenshot  screen_me.png  #robię zrzut ekranu do raportu
 
 Test Find Osteopathie  #sprawdzam, czy na stronie zawarte są odpowiednie wyrażenia
