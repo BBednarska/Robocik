@@ -30,7 +30,7 @@ Test Click Team                 #sprawdzam, czy poszczególne elementy są klika
     capture page screenshot     screen_team.png   #robię zrzut ekranu do raportu
 
 Test Scroll & Screenshot  #sprawdzam, czy możliwe jest skrollowanie na stronie
-    OpenPageAndAcceptCookies
+    Open Page And Accept Cookies
     click element   ${TEAM_LINK}
     execute javascript  window.scrollBy(0,4250)
 
@@ -38,7 +38,7 @@ Test Scroll & Screenshot  #sprawdzam, czy możliwe jest skrollowanie na stronie
     capture page screenshot  screen_me.png  #robię zrzut ekranu do raportu
 
 Test Find Osteopathie  #sprawdzam, czy na stronie zawarte są odpowiednie wyrażenia
-    OpenPageAndAcceptCookies
+    Open Page And Accept Cookies
     page should contain  ${PAGE_TITLE}
 
 
