@@ -1,36 +1,43 @@
-*** Variables ***
-
-${url}  https://www.physiotherapie-in-koepenick.de/
 *** Settings ***
 Library  RequestsLibrary
 Library  SeleniumLibrary
+
+*** Variables ***
+
+${URL}              https://www.physiotherapie-in-koepenick.de/  #zapisuję adres testowanej strony
+${PAGE_TITLE}       Osteopathie
+${ACCEPT_BUTTON}    Xpath://a[contains(@class, 'accept-consent-all')]
+${TEAM_LINK}        Xpath=(//a[@href="/team"])[2]
+
+*** Keywords ***
+Open Web                        #tworzę komendę do otwierania i maksymalizowania okna przeglądarki
+    open browser    ${URL}  Chrome
+    maximize browser window
+Open Page And Accept Cookies
+    Open Web
+    click element  ${ACCEPT_BUTTON}   #akceptowanie plikw cookies
+
 *** Test Cases ***
 
-Test open browser
-    open browser    ${url}  Chrome
-    close browser
+Test Open Browser               #otwieram i maksymalizuję stronę
+    Open Web                     #refaktoryzacja kodu
+    title should be  Über uns   #potwierdzenie czy strona się otworzyła
 
-Test click coockies
-    open browser    ${url}  Chrome
-    sleep   1
-    click element   Xpath:/html/body/div/div[3]/div/div[2]/a[1]
+Test Click Team                 #sprawdzam, czy poszczególne elementy są klikalne
+    Open Page And Accept Cookies
+    click element   ${TEAM_LINK}
+    title should be  Team
+    capture page screenshot     screen_team.png   #robię zrzut ekranu do raportu
 
-Test click team
-    open browser    ${url}  Chrome
-    sleep   1
-    click element   Xpath:/html/body/div/div[3]/div/div[2]/a[1]
-    sleep   1
-    click element   Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a
+Test Scroll & Screenshot  #sprawdzam, czy możliwe jest skrollowanie na stronie
+    OpenPageAndAcceptCookies
+    click element   ${TEAM_LINK}
+    execute javascript  window.scrollBy(0,4250)
     sleep   2
-    capture page screenshot     screen_team.png
+    capture page screenshot  screen_me.png  #robię zrzut ekranu do raportu
 
-Test scroll
-    open browser    ${url}  Chrome
-    sleep   1
-    click element   Xpath:/html/body/div/div[3]/div/div[2]/a[1]
-    sleep   1
-    click element   Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a
-    sleep   2
-    execute javascript  window.scrollBy(0,3500)
-    sleep   2
-    capture page screenshot  screen_me.png
+Test Find Osteopathie  #sprawdzam, czy na stronie zawarte są odpowiednie wyrażenia
+    OpenPageAndAcceptCookies
+    page should contain  ${PAGE_TITLE}
+    sleep  2
+
