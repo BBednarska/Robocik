@@ -13,14 +13,13 @@ ${TEAM_LINK}        Xpath=(//a[@href="/team"])[2]
 Open Web                        #tworzenie komendy do otwierania i maksymalizowania okna przeglądarki
     open browser    ${URL}  Chrome
     maximize browser window
-
-Check If Open and Click ${link}
-    Open Page And Accept Cookies
-    click element   ${link}
-
 Open Page And Accept Cookies
     Open Web
     click element  ${ACCEPT_BUTTON}   #akceptowanie plików cookies
+    
+Check If Open and Click ${link}
+    Open Page And Accept Cookies
+    click element   ${link}
 
 *** Test Cases ***
 
