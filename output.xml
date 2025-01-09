@@ -1,149 +1,170 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2024-10-10T13:29:36.180943" rpa="false" schemaversion="5">
+<robot generator="Robot 7.1 (Python 3.12.5 on win32)" generated="2025-01-09T12:18:11.678122" rpa="false" schemaversion="5">
 <suite id="s1" name="Physiotherapie" source="C:\Users\user\PycharmProjects\Robot\Physiotherapie.robot">
-<test id="s1-t1" name="Test open browser" line="9">
+<test id="s1-t1" name="Test Open Browser" line="30">
+<kw name="Open Web">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:37.057467" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
-<arg>${url}</arg>
+<msg time="2025-01-09T12:18:12.411808" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
+<arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-10T13:29:37.057467" elapsed="2.767668"/>
+<status status="PASS" start="2025-01-09T12:18:12.411808" elapsed="7.556376"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2024-10-10T13:29:39.838643" elapsed="2.119607"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-09T12:18:19.968184" elapsed="0.047777"/>
 </kw>
-<status status="PASS" start="2024-10-10T13:29:37.043426" elapsed="4.914824"/>
+<status status="PASS" start="2025-01-09T12:18:12.402297" elapsed="7.613664"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-09T12:18:20.033306" level="INFO">Page title is 'Über uns'.</msg>
+<arg>Über uns</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-09T12:18:20.018955" elapsed="0.014351"/>
+</kw>
+<status status="PASS" start="2025-01-09T12:18:12.402297" elapsed="7.638193"/>
 </test>
-<test id="s1-t2" name="Test click coockies" line="13">
+<test id="s1-t2" name="Test Click Team" line="34">
+<kw name="Prepare Env">
+<kw name="Set Screenshot Directory" owner="SeleniumLibrary">
+<arg>screenshots</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<status status="PASS" start="2025-01-09T12:18:20.041699" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2025-01-09T12:18:20.041699" elapsed="0.000000"/>
+</kw>
+<kw name="Check If Open and Click ${TEAM_LINK}" source_name="Check If Open and Click ${link}">
+<kw name="Open Page And Accept Cookies">
+<kw name="Open Web">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:41.958250" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
-<arg>${url}</arg>
+<msg time="2025-01-09T12:18:20.046855" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
+<arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-10T13:29:41.958250" elapsed="2.533834"/>
+<status status="PASS" start="2025-01-09T12:18:20.046855" elapsed="11.189979"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-10T13:29:45.492539" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-10T13:29:44.492084" elapsed="1.000455"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-09T12:18:31.236834" elapsed="0.074059"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:45.492539" level="INFO">Clicking element 'Xpath:/html/body/div/div[3]/div/div[2]/a[1]'.</msg>
-<arg>Xpath:/html/body/div/div[3]/div/div[2]/a[1]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-10T13:29:45.492539" elapsed="0.129644"/>
-</kw>
-<status status="PASS" start="2024-10-10T13:29:41.958250" elapsed="3.664076"/>
-</test>
-<test id="s1-t3" name="Test click team" line="18">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:45.623345" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
-<arg>${url}</arg>
-<arg>Chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-10T13:29:45.623345" elapsed="2.541495"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-10T13:29:49.165191" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-10T13:29:48.164840" elapsed="1.000351"/>
+<status status="PASS" start="2025-01-09T12:18:20.045729" elapsed="11.268722"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:49.165191" level="INFO">Clicking element 'Xpath:/html/body/div/div[3]/div/div[2]/a[1]'.</msg>
-<arg>Xpath:/html/body/div/div[3]/div/div[2]/a[1]</arg>
+<msg time="2025-01-09T12:18:31.314451" level="INFO">Clicking element 'Xpath://a[contains(@class, 'accept-consent-all')]'.</msg>
+<arg>${ACCEPT_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-10T13:29:49.165191" elapsed="0.127165"/>
+<status status="PASS" start="2025-01-09T12:18:31.314451" elapsed="0.207026"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-10T13:29:50.293745" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-10T13:29:49.293401" elapsed="1.000344"/>
+<status status="PASS" start="2025-01-09T12:18:20.045729" elapsed="11.475748"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:50.293745" level="INFO">Clicking element 'Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a'.</msg>
-<arg>Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a</arg>
+<msg time="2025-01-09T12:18:31.521477" level="INFO">Clicking element 'Xpath=(//a[@href="/team"])[2]'.</msg>
+<arg>${link}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-10T13:29:50.293745" elapsed="0.409019"/>
+<status status="PASS" start="2025-01-09T12:18:31.521477" elapsed="1.028513"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-10T13:29:52.704722" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-10T13:29:50.703784" elapsed="2.000938"/>
+<status status="PASS" start="2025-01-09T12:18:20.041699" elapsed="12.508291"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2025-01-09T12:18:32.562404" level="INFO">Page title is 'Team'.</msg>
+<arg>Team</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2025-01-09T12:18:32.549990" elapsed="0.012414"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:53.022828" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screen_team.png"&gt;&lt;img src="screen_team.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-09T12:18:33.145878" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/screen_team.png"&gt;&lt;img src="screenshots/screen_team.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screen_team.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-10-10T13:29:52.705787" elapsed="0.317041"/>
+<status status="PASS" start="2025-01-09T12:18:32.562404" elapsed="0.583474"/>
 </kw>
-<status status="PASS" start="2024-10-10T13:29:45.623345" elapsed="7.415094"/>
+<status status="PASS" start="2025-01-09T12:18:20.041699" elapsed="13.104179"/>
 </test>
-<test id="s1-t4" name="Test scroll" line="27">
+<test id="s1-t3" name="Test Scroll &amp; Screenshot" line="40">
+<kw name="Check If Open and Click ${TEAM_LINK}" source_name="Check If Open and Click ${link}">
+<kw name="Open Page And Accept Cookies">
+<kw name="Open Web">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:53.038439" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
-<arg>${url}</arg>
+<msg time="2025-01-09T12:18:33.145878" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
+<arg>${URL}</arg>
 <arg>Chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2024-10-10T13:29:53.038439" elapsed="2.799201"/>
+<status status="PASS" start="2025-01-09T12:18:33.145878" elapsed="3.936738"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-10T13:29:56.838187" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-10T13:29:55.837640" elapsed="1.000547"/>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-09T12:18:37.082616" elapsed="0.038366"/>
 </kw>
-<kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:56.838187" level="INFO">Clicking element 'Xpath:/html/body/div/div[3]/div/div[2]/a[1]'.</msg>
-<arg>Xpath:/html/body/div/div[3]/div/div[2]/a[1]</arg>
-<doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-10T13:29:56.838187" elapsed="0.137405"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-10T13:29:57.975924" level="INFO">Slept 1 second.</msg>
-<arg>1</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-10T13:29:56.975592" elapsed="1.000332"/>
+<status status="PASS" start="2025-01-09T12:18:33.145878" elapsed="3.975104"/>
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:29:57.975924" level="INFO">Clicking element 'Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a'.</msg>
-<arg>Xpath:/html/body/div/div[1]/div[1]/div[2]/div/div[1]/div[2]/div/div/div[2]/div[2]/div/div/a</arg>
+<msg time="2025-01-09T12:18:37.122644" level="INFO">Clicking element 'Xpath://a[contains(@class, 'accept-consent-all')]'.</msg>
+<arg>${ACCEPT_BUTTON}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2024-10-10T13:29:57.975924" elapsed="0.700781"/>
+<status status="PASS" start="2025-01-09T12:18:37.120982" elapsed="0.161623"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-10T13:30:00.676939" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-10T13:29:58.676705" elapsed="2.000234"/>
+<status status="PASS" start="2025-01-09T12:18:33.145878" elapsed="4.136727"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-09T12:18:37.282605" level="INFO">Clicking element 'Xpath=(//a[@href="/team"])[2]'.</msg>
+<arg>${link}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T12:18:37.282605" elapsed="0.615904"/>
+</kw>
+<status status="PASS" start="2025-01-09T12:18:33.145878" elapsed="4.752631"/>
 </kw>
 <kw name="Execute Javascript" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:30:00.676939" level="INFO">Executing JavaScript:
-window.scrollBy(0,3500)
+<msg time="2025-01-09T12:18:37.898509" level="INFO">Executing JavaScript:
+window.scrollBy(0,4250)
 Without any arguments.</msg>
-<arg>window.scrollBy(0,3500)</arg>
+<arg>window.scrollBy(0,4250)</arg>
 <doc>Executes the given JavaScript code with possible arguments.</doc>
-<status status="PASS" start="2024-10-10T13:30:00.676939" elapsed="0.014828"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2024-10-10T13:30:02.692326" level="INFO">Slept 2 seconds.</msg>
-<arg>2</arg>
-<doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2024-10-10T13:30:00.691767" elapsed="2.000559"/>
+<status status="PASS" start="2025-01-09T12:18:37.898509" elapsed="0.012367"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2024-10-10T13:30:02.833475" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screen_me.png"&gt;&lt;img src="screen_me.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-01-09T12:18:38.454748" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="screenshots/screen_me.png"&gt;&lt;img src="screenshots/screen_me.png" width="800px"&gt;&lt;/a&gt;</msg>
 <arg>screen_me.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2024-10-10T13:30:02.692326" elapsed="0.141149"/>
+<status status="PASS" start="2025-01-09T12:18:37.910876" elapsed="0.543872"/>
 </kw>
-<status status="PASS" start="2024-10-10T13:29:53.038439" elapsed="9.795036"/>
+<status status="PASS" start="2025-01-09T12:18:33.145878" elapsed="5.309384"/>
 </test>
-<status status="PASS" start="2024-10-10T13:29:36.180943" elapsed="26.652532"/>
+<test id="s1-t4" name="Test Find Osteopathie" line="45">
+<kw name="Open Page And Accept Cookies">
+<kw name="Open Web">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-01-09T12:18:38.459704" level="INFO">Opening browser 'Chrome' to base url 'https://www.physiotherapie-in-koepenick.de/'.</msg>
+<arg>${URL}</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-01-09T12:18:38.459704" elapsed="6.520255"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-01-09T12:18:44.979959" elapsed="0.050104"/>
+</kw>
+<status status="PASS" start="2025-01-09T12:18:38.457892" elapsed="6.572171"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-01-09T12:18:45.030063" level="INFO">Clicking element 'Xpath://a[contains(@class, 'accept-consent-all')]'.</msg>
+<arg>${ACCEPT_BUTTON}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-01-09T12:18:45.030063" elapsed="0.152922"/>
+</kw>
+<status status="PASS" start="2025-01-09T12:18:38.457892" elapsed="6.725093"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-01-09T12:18:45.211664" level="INFO">Current page contains text 'Osteopathie'.</msg>
+<arg>${BUTTON_TITLE}</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-01-09T12:18:45.184262" elapsed="0.027402"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-01-09T12:18:45.211664" elapsed="2.147815"/>
+</kw>
+<status status="PASS" start="2025-01-09T12:18:38.456247" elapsed="8.903232"/>
+</test>
+<status status="PASS" start="2025-01-09T12:18:11.678122" elapsed="35.681357"/>
 </suite>
 <statistics>
 <total>
